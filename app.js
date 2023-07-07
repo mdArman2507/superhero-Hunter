@@ -1,11 +1,12 @@
 // API--https://superheroapi.com/api/2071918619630152
 
+// fetch html data by Id
 const search=document.getElementById("search_bar");
 const matches_list=document.getElementById("search_list");
 const search_btn = document.getElementById("search_btn");
 const fav_btn=document.getElementById("fav_btn");
   
-
+// using marvel api
 fetch(`https://akabab.github.io/superhero-api/api/all.json`
        
        
@@ -22,7 +23,7 @@ fetch(`https://akabab.github.io/superhero-api/api/all.json`
 const heroes=[];
 let id;
 
-
+// searchMatch function 
 function SearchMatches(text,heroes){
 
     return heroes.filter(hero=>{
@@ -31,6 +32,7 @@ function SearchMatches(text,heroes){
     });
 }
 
+// searching in marvel api
 search.addEventListener("input",()=>{
 
 
@@ -53,6 +55,8 @@ search.addEventListener("input",()=>{
    }
    
 });
+
+// fetching data 
 matches_list.addEventListener("click",(e)=>{
     console.log("clicked");
     const item = e.target;
@@ -66,6 +70,7 @@ matches_list.addEventListener("click",(e)=>{
 
 })
 
+// when we click the search button then fetch the data and open hero.html file
 search_btn.addEventListener("click",()=>{
     
     
@@ -77,6 +82,8 @@ search_btn.addEventListener("click",()=>{
     window.open(`./html/hero.html?id=${id}`,"_blank");
 })
 
+
+// when we click the favourite button then fetch the data and open favList.html file
 fav_btn.addEventListener("click",()=>{
     window.open("./html/favlist.html","_blank");
 })

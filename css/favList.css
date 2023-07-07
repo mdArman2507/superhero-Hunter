@@ -43,7 +43,7 @@ body{
     flex-wrap: wrap;
     border-radius: 5px;
 }
-
+/* Adding card class to using :design */
 .card{
     text-align: center;
     border-radius: 5px;

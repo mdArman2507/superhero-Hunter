@@ -1,6 +1,11 @@
+// fetching data from api
 let params = new URLSearchParams(window.location.search)
 let id=params.get('id');
+
+// create a Array
 let favList=[];
+
+// create superHero bio variable
 let hero;
  let combat,duration,intelligence,power,speed,strength;
  let aliases,alignment,alterEgos,firstAppearance,fullName,placeOfBirth,publisher;
@@ -24,8 +29,7 @@ let btn=document.querySelector(".btn");
        
 
         
-
-        
+// displaying the data of superHero
         const htmlData = `
        
     <div class="hero_card">
@@ -53,6 +57,7 @@ let btn=document.querySelector(".btn");
      <button class="btn" style="background-color:yellow" type="submit"><i class="fas fa-heart"></i>Add to Favourites</button>
 
  </div>
+
  <div class="hero_info">
 
       <h1>

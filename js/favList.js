@@ -1,10 +1,11 @@
+// fetch the container data to the querySelector
 let container = document.querySelector(".container");
 
 let allData = JSON.parse(localStorage.getItem("allEntries"));
 
 
 
-
+// show data of superHero
 
 const html = allData.map(element=>{
     return (`<div class="card" >
@@ -24,7 +25,7 @@ container.addEventListener("click",(e)=>{
     
     let card=e.target;
     
-  
+//   delete superHero data stored in list
     if(card.classList[0]==='del'){
         let id = card.getAttribute("val");
         console.log(id);
@@ -35,6 +36,8 @@ container.addEventListener("click",(e)=>{
 
         localStorage.setItem("allEntries", JSON.stringify(allData));
     }
+    
+    // show the info of superHero
     if(card.classList[0]=="info"){
         let id = card.getAttribute("val");
         window.open(`hero.html?id=${id}`,"_blank")
